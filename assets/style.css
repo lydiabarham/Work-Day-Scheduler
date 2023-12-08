@@ -27,8 +27,24 @@ body {
   }
   
   .time-block {
-    text-align: center;
+    text-align: center; 
     border-radius: 15px;
+    height: 40px;
+    border: solid #CC5500 1px;
+  }
+
+  #time {
+    text-align: left;
+  }
+
+  .save-button {
+    background-color: #CC5500;
+    opacity: 0.5;
+    border-radius: 10px;
+    position: relative;
+    justify-content: end;
+    width: 10%;
+    height: 80%; 
   }
   
   .row {
