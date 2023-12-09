@@ -31,6 +31,7 @@ body {
     border-radius: 15px;
     height: 40px;
     border: solid #CC5500 1px;
+    margin: 10px;
   }
 
   #time {
@@ -40,11 +41,22 @@ body {
   .save-button {
     background-color: #CC5500;
     opacity: 0.5;
-    border-radius: 10px;
-    position: relative;
-    justify-content: end;
-    width: 10%;
-    height: 80%; 
+    border-radius: 20px;
+    float: right;
+    width: 20%;
+    height: 100%; 
+    border: solid 4px white;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .button-text {
+      display: none;
+    }
+  }
+
+  .hour-display {
+    float: left;
+    padding: 10px;
   }
   
   .row {
