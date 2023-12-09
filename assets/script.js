@@ -1,8 +1,8 @@
 const currentDay = $('#currentDay');
 const updateDateTime = () => {
-  const currentTime = dayjs().format('MMM, DD YYYY HH:mm:ss');
-  currentDay.text(currentTime);
-  currentDay.css("color", "#CC5500");
+    const currentTime = dayjs().format('MMM, DD YYYY HH:mm:ss');
+    currentDay.text(currentTime);
+    currentDay.css("color", "#CC5500");
 };
 updateDateTime();
 setInterval(updateDateTime, 1000);
@@ -11,11 +11,11 @@ const timeBlockArray = [
     8, 9, 10, 11, 12, 13, 14, 15, 16, 17
 ];
 
-for (let i = 0; i< timeBlockArray.length; i++) {
+for (let i = 0; i < timeBlockArray.length; i++) {
     //create timeblocks
     let timeBlock = $("<div>");
     timeBlock.addClass("time-block");
-    timeBlock.attr("index[i]"); 
+    timeBlock.attr("index[i]");
     $(".container").append(timeBlock);
     //create save button
     let saveButton = $("<button>");
@@ -28,18 +28,35 @@ for (let i = 0; i< timeBlockArray.length; i++) {
     //set hour
     let hourDisplay = $("<span>");
     hourDisplay.addClass("hour-display");
-    let hour = dayjs().set('hour', 8+i).format("hh[:00]a");
+    let hour = dayjs().set('hour', 8 + i).format("HH[:00]");
     hourDisplay.text(hour);
     timeBlock.append(hourDisplay);
+
+    const currentHour = dayjs().format("HH[:00]");
+
+    console.log(hour);
+    console.log(currentHour);
+
+    if (hour < currentHour) {
+        timeBlock.addClass("past")
+    } else if (hour === currentHour) {
+        timeBlock.addClass("present");
+    } else {
+        timeBlock.addClass("future");
+    }
 }
 
+// Get the current time block
+
+// Compare the time of the current block with the current time
+
+
+
 /*
-for (let i = 0; i< timeBlockArray.length; i++) {
-    let hourDisplay = $("<span>")
-    let hour = dayjs().set('hour', 8+i);
-    hourDisplay.text(hour);
-    timeBlock.append(hourDisplay);
-}
+if (dayjs(currentHour).isAfter(dayjs(), "hour")) {
+     currentBlock.css("background-color", "blue");
+ } else {
+
 
 const currentHour = dayjs().isSame($("#time"), "hour");
 const displayCurrentHour = () => {

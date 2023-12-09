@@ -40,12 +40,12 @@ body {
 
   .save-button {
     background-color: #CC5500;
-    opacity: 0.5;
-    border-radius: 20px;
+    border-radius: 15px;
     float: right;
     width: 20%;
     height: 100%; 
     border: solid 4px white;
+    color: white;
   }
 
   @media only screen and (max-width: 600px) {
@@ -72,17 +72,23 @@ body {
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #CC5500;
+    opacity: 0.5;
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #cc0077;
+    border: solid 1px #cc0077;
     color: white;
+  }
+
+  .present > .save-button {
+    background-color: #cc0077;
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: #CC5500;
     color: white;
   }
   
