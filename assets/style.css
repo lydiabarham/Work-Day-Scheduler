@@ -34,6 +34,20 @@ body {
     margin: 10px;
   }
 
+  .input-box {
+    background-color: white;
+    opacity: 0.2;
+    height: 100%;
+    width: 60%;
+    border: solid #cc0077 2px;
+    color: black;
+  }
+
+  .input-list-item {
+    color: #000000;
+    display: flow-root;
+  }
+
   #time {
     text-align: left;
   }
@@ -92,15 +106,7 @@ body {
     color: white;
   }
   
-  .saveBtn {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06aed5;
-    color: white;
-  }
-  
-  .saveBtn i:hover {
+  .save-button i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
