@@ -23,10 +23,10 @@ for (let i = 0; i < timeBlockArray.length; i++) {
     let hour = dayjs().set('hour', 8 + i).format("HH[:00]");
     hourDisplay.text(hour);
     timeBlock.append(hourDisplay);
-    
+
     // use if statement to show past, present and future
     const currentHour = dayjs().format("HH[:00]");
-    
+
     if (hour < currentHour) {
         timeBlock.addClass("past");
     } else if (hour === currentHour) {
@@ -54,25 +54,33 @@ for (let i = 0; i < timeBlockArray.length; i++) {
 
     // add event listener 
     saveButton.on("click", function () {
-        saveInput(userInputEl, i);
-        printInput(i);
+        const userInputValue = userInputEl.val().trim();
+
+        if (userInputValue !== "") {
+            saveInput(userInputEl, i);
+            printInput(i);
+            userInputEl.val("");
+            userInputEl.attr("placeholder", "Create event:");
+        } else {
+
+        }
     });
 }
 
 // save input to local storage 
 const saveInput = function (inputEl, index) {
     let savedInput = inputEl.val();
-    localStorage.setItem(`input-${index}`, JSON.stringify(savedInput));
-}
+    localStorage.setItem(`input-${index}`, savedInput);
+};
 
 // retrieve input from local storage 
 const printInput = function (index) {
-    const inputList = $("<ol>");
+    const inputList = $("<ul>");
     inputList.addClass("input-list");
     const inputListItem = $('<li>');
     inputListItem.addClass("input-list-item");
     const inputText = localStorage.getItem(`input-${index}`);
     inputListItem.text(inputText);
-    $(`.time-block[index=${index}]`).append(inputList); 
+    $(`.time-block[index=${index}]`).append(inputList);
     inputList.append(inputListItem);
 };

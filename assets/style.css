@@ -29,23 +29,31 @@ body {
   .time-block {
     text-align: center; 
     border-radius: 15px;
-    height: 40px;
+    height: flex;
     border: solid #CC5500 1px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     margin: 10px;
   }
 
   .input-box {
     background-color: white;
     opacity: 0.2;
-    height: 100%;
+    height: 120%;
     width: 60%;
     border: solid #cc0077 2px;
     color: black;
   }
 
+  .input-list {
+    display: block;
+    padding-top: 10px;
+    text-align: start;
+  }
+
   .input-list-item {
     color: #000000;
-    display: flow-root;
+    padding-left: 10px;
   }
 
   #time {
@@ -57,7 +65,7 @@ body {
     border-radius: 15px;
     float: right;
     width: 20%;
-    height: 100%; 
+    height: 120%; 
     border: solid 4px white;
     color: white;
   }
@@ -106,8 +114,7 @@ body {
     color: white;
   }
   
-  .save-button i:hover {
+  .save-button:hover {
     font-size: 20px;
-    transition: all 0.3s ease-in-out;
   }
   
