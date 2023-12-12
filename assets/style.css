@@ -37,23 +37,36 @@ body {
   }
 
   .input-box {
-    background-color: white;
-    opacity: 0.2;
+    background-color: beige;
+    opacity: 0.5;
     height: 120%;
     width: 60%;
-    border: solid #cc0077 2px;
+    border: beige solid 2px;
     color: black;
   }
 
   .input-list {
     display: block;
-    padding-top: 10px;
     text-align: start;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .input-list-item {
     color: #000000;
-    padding-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    padding: 5px;
+    list-style-type: none; 
+    border: #000000 solid 1px;
+    border-radius: 5px;
+    background-color: beige;
+  }
+
+  .list-checkbox {
+    float: right;
+    margin-right: 20px;
   }
 
   #time {
@@ -79,12 +92,6 @@ body {
   .hour-display {
     float: left;
     padding: 10px;
-  }
-  
-  .row {
-    white-space: pre-wrap;
-    height: 80px;
-    border-top: 1px solid white;
   }
   
   .hour {

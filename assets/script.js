@@ -81,6 +81,16 @@ const printInput = function (index) {
     inputListItem.addClass("input-list-item");
     const inputText = localStorage.getItem(`input-${index}`);
     inputListItem.text(inputText);
+    listCheckbox = $("<input>");
+    listCheckbox.attr("type", "checkbox");
+    listCheckbox.addClass("list-checkbox");
+    inputListItem.append(listCheckbox);
     $(`.time-block[index=${index}]`).append(inputList);
     inputList.append(inputListItem);
 };
+
+// add event listener on checkbox
+$(".time-block").on("click", ".list-checkbox", function () {
+    let thisListItem = $(this).closest(".input-list-item");
+    thisListItem.remove();
+});
