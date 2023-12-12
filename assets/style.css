@@ -83,18 +83,6 @@ body {
     color: white;
   }
 
-  @media only screen and (max-width: 600px) {
-    .button-text {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 480px) {
-    .save-button {
-        width: 30px;
-    }
-  }
-
   .hour-display {
     float: left;
     padding: 10px;
@@ -130,4 +118,35 @@ body {
   .save-button:hover {
     font-size: 20px;
   }
+
+  @media only screen and (max-width: 600px) {
+    .button-text {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .save-button {
+        width: 30px;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    .time-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+  }
+
+  @media only screen and (min-width: 1201px) {
+    .time-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+  }
+  
   
